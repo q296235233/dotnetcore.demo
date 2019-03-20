@@ -24,7 +24,7 @@ namespace dotnetcore.Api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get(string str)
         {
-            List<string> strs = new List<string> {
+            List<string> strs = new List<string> {     
                 str,"Post","Get","Put"
             };
 
