@@ -18,7 +18,7 @@ namespace dotnetcore.Api
         {
             //services.AddScoped<ILogger, Logger>();
 
-            services.AddMvc();
+            services.AddMvc();    
         }
 
         // 管道
