@@ -10,16 +10,23 @@ using Microsoft.Extensions.Logging;
 
 namespace dotnetcore.Api
 {
-    public class Program
+    public class Program // 程序
     {
         public static void Main(string[] args)
         {
+
+
             // test
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run(); //指定Wbe主机启动的类型
+
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+
+        public static IWebHostBuilder CreateWebHostBuilder  (string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>(); //启动服务
+
+
+
     }
 }
