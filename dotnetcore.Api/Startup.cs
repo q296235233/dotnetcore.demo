@@ -32,10 +32,11 @@ namespace dotnetcore.Api
 
         // 管道
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
+        { 
             if (env.IsDevelopment())   //进行是生产  不会出页面异常
             {
                 app.UseDeveloperExceptionPage();
+                
             }
 
 

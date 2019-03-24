@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var User in Model.users)   
+            {
+            <tr>    
+                <td> @User.Id</td>
+                <td> @User.Name</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id=" @User.Id ">编辑</a>
+
+                    <button type="submit" asp-page-handler="delete"
+                            asp-route-id="@User.Id">
+                        删除
+                    </button>
+
+                </td>
+            </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+
+
+    <a asp-page="./Create">跳转</a> @*跳转*@
+
+</form>
